@@ -1,5 +1,5 @@
 const mapboxgl = require("mapbox-gl")
-const marker =  require("./marker")
+const buildMarker =  require("./marker")
 
 mapboxgl.accessToken = "pk.eyJ1IjoiZWx6YS1hYiIsImEiOiJjamVxMnhsamQ1dmkxMzJsbnMweTJueTIzIn0.FvJGBmsdzyFwjiez0MLjrQ";
 
@@ -10,7 +10,7 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
-marker("hotel", [-74.009151, 40.705086]).addTo(map);
+buildMarker("hotel", [-74.009151, 40.705086]).addTo(map);
 
 
 
